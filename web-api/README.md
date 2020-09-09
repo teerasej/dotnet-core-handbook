@@ -1,6 +1,10 @@
 
 # .NET Core Web API with MongoDB Handbook
 
+```
+.NET Core 3.1
+```
+
 1. [ติดตั้งโปรแกรม และระบบที่ต้องใช้](web-api/setup.md)
 2. [สร้างโปรเจค Web API และทดสอบใช้งาน](web-api/create-project.md)
 
