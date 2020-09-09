@@ -3,7 +3,7 @@
 
 ## Setup
 
-- Setup the tools
+- [ติดตั้งโปรแกรม และระบบที่ต้องใช้](setup.md)
 
 ### สิ่งที่ควรมี
 
@@ -12,10 +12,13 @@
 
 ## Workshop
 
-1. Azure AD Application setting
-2. Authentication & Token 
-3. Authentication ด้วย Microsoft Identity SDK
-4. การใช้งาน Microsof Graph SDK
+1. [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
+2. [Authentication และรับ Token ด้วย Microsoft Identity SDK](authentication-console-app.md)
+3. [การใช้ Microsoft Graph ผ่าน URL โดยตรง](access-graph-via-url.md)
+4. [การ Setup ตัว Microsof Graph Client SDK](use-ms-graph-client.md)
+5. การเรียกชื่อผู้ใช้ผ่าน Microsof Graph Client
+6. การบันทึกภาพโปรไฟล์ผ่าน Microsoft Graph Client
+7. การแสดงข้อมูลของ Drive ผู้ใช้ ผ่าน Microsoft Graph Client
 
 ## Workshop
 
