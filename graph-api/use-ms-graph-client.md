@@ -106,7 +106,7 @@ namespace GraphAPI_1
 }
 ```
 
-## 3. สร้าง Graph Helper ในการจัดการเข้าถึงข้อมูลต่างๆ 
+## 3. สร้างไฟล์ `GraphHelper.cs` ในการจัดการเข้าถึงข้อมูลต่างๆ 
 
 ```c#
 using System;
