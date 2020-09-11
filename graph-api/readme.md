@@ -10,15 +10,22 @@
 - Microsoft Account ที่สามารถเข้าใช้งาน และตั้งค่า Azure Active Directory ได้
 - Microsoft Account ที่สามารถเข้าถึง และใช้งาน Microsoft Office 365 ได้ 
 
-## Workshop 1
+## Authentication ผ่าน API แบบทั่วไป
 
 1. [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
 2. [Authentication และรับ Token ด้วย Microsoft Identity SDK](authentication-console-app.md)
 3. [การใช้ Microsoft Graph ผ่าน URL โดยตรง](access-graph-via-url.md)
+
+### Microsoft Graph SDK
+
 4. [การ Setup ตัว Microsof Graph Client SDK](use-ms-graph-client.md)
 5. [การเรียกชื่อผู้ใช้ผ่าน Microsof Graph Client](graph-get-display-name.md)
 6. [การบันทึกภาพโปรไฟล์ผ่าน Microsoft Graph Client](graph-get-profile-photo.md)
 7. [การแสดงข้อมูลของ Drive ผู้ใช้ ผ่าน Microsoft Graph Client](graph-get-drive-items.md)
+
+### Microsoft Graph SDK Authentication
+
+8. [เรียกดูรายการอีเมลล์](graph-get-mails.md)
 
 ## Workshop 2
 
