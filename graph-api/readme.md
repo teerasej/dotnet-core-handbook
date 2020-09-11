@@ -37,5 +37,6 @@
 2. [การตั้งค่า Authentication ของ Azure AD App สำหรับใช้กับ Microsoft.Identity.Web](setup-authentication-for-microsoft-identity-web.md)
 3. [สร้าง และใช้งานโปรเจค Blazor Server ด้วย .NET Identity Web Template](create-and-run-blazor-server-with-ms-identity-web.md)
 
+4. [ทดสอบใช้งาน Web Identity](blazor-server-ms-identity-web.md)
 
 
