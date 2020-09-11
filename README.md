@@ -1,7 +1,7 @@
 
 # .NET Handbook
 
-- [.NET with Microsoft Graph API](graph-api/readme.md)
+- [.NET with Microsoft Graph API](/graph-api/readme.md)
 
 
 ## Other workshop
