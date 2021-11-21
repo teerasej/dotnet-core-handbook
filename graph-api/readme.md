@@ -1,11 +1,11 @@
 
 # .NET with Microsoft Graph API
 
-## Setup
+## Setup the Machine
 
 - [ติดตั้งโปรแกรม และระบบที่ต้องใช้](setup.md)
 
-### การสมัคร Office 365 Developer Account
+## การสมัคร Office 365 Developer Account
 
 - [วิธีสร้าง Developer Account](365-dev-account/readme.md)
 
