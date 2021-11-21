@@ -5,10 +5,9 @@
 
 - [ติดตั้งโปรแกรม และระบบที่ต้องใช้](setup.md)
 
-### สิ่งที่ควรมี
+### การสมัคร Office 365 Developer Account
 
-- Microsoft Account ที่สามารถเข้าใช้งาน และตั้งค่า Azure Active Directory ได้
-- Microsoft Account ที่สามารถเข้าถึง และใช้งาน Microsoft Office 365 ได้ 
+- [วิธีสร้าง Developer Account](365-dev-account/readme.md)
 
 ## Authentication ผ่าน API แบบทั่วไป
 
