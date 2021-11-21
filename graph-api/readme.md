@@ -13,6 +13,10 @@
 
 - [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
 
+## ⚠️ Predecated Content ⚠️
+
+### Authentication ผ่าน API แบบทั่วไป (Web Application)
+
 1. [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
 2. [Authentication และรับ Token ด้วย Microsoft Identity SDK](authentication-console-app.md)
 3. [การใช้ Microsoft Graph ผ่าน URL โดยตรง](access-graph-via-url.md)
