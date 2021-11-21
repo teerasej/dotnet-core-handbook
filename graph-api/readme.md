@@ -9,7 +9,9 @@
 
 - [วิธีสร้าง Developer Account](365-dev-account/readme.md)
 
-## Authentication ผ่าน API แบบทั่วไป
+## Register Application 
+
+- [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
 
 1. [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
 2. [Authentication และรับ Token ด้วย Microsoft Identity SDK](authentication-console-app.md)
