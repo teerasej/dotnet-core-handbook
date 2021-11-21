@@ -13,6 +13,15 @@
 
 - [สร้างและตั้งค่า Application ใน Azure AD](register-app-in-azure-ad.md)
 
+
+## Workshop
+
+- [Hello, Me!](workshop/hello-me/readme.md)
+- [Accessing Email]
+- [Working with OneDrive]
+- [Managing Calendar]
+- [Hosting Team]
+
 ## ⚠️ Predecated Content ⚠️
 
 ### Authentication ผ่าน API แบบทั่วไป (Web Application)
