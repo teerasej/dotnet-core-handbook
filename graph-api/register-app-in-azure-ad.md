@@ -15,8 +15,15 @@
 
 ## 2. ลงทะเบียนแอพเพื่อใช้งานกับ Azure AD
 
-- ในส่วน Manage ให้เลือก App registrations ซึ่งจะมีโปรไฟล์ของ App ที่มีการลงทะเบียนกับ domain นี้ไว้ก่อนอยู่แล้ว 
-- คลิกปุ่ม New Registration เพื่อเริ่มการลงทะเบียน
+- ในส่วน **Manage** ให้เลือก **App registrations** เราจะได้เห็นโปรไฟล์ของ App ที่มีการลงทะเบียนกับ domain นี้ไว้ก่อนแล้ว (ถ้ามี)
+
+
+<img width="488" alt="2021-11-21_20-40-37" src="https://user-images.githubusercontent.com/85179/142765375-0cdfa3a4-0c4d-458c-b411-23ae5a6fbe2f.png">
+
+- คลิกปุ่ม **New Registration** เพื่อเริ่มการลงทะเบียน
+
+<img width="623" alt="2021-11-21_20-41-18" src="https://user-images.githubusercontent.com/85179/142765427-d37eed97-7445-46fb-babf-a848f4d53b8e.png">
+
 
 ## 3. กรอกรายละเอียดของ Application 
 
@@ -30,15 +37,24 @@
 
 4. กด register ได้เลย 
 
+<img width="880" alt="2021-11-21_20-43-50" src="https://user-images.githubusercontent.com/85179/142765436-9cbfe898-7554-4cf6-9d04-309abe584dae.png">
+
+
 ## 4. เก็บ Application (client) ID
 
 พอลงทะเบียนแอพเรียบร้อยแล้ว เราจะมาอยู่หน้า Dashboard ให้ กดดูในส่วน Overview และ คัดลอก **Appliation ID** เอาไว้ เราต้องเอามันมาใช้ใน Client (ในที่นี้เป็น Desktop Client)
+
+<img width="640" alt="2021-11-21_20-44-30" src="https://user-images.githubusercontent.com/85179/142765443-e8b7cb01-04a6-4792-9dbf-ce8601a7d7f7.png">
+
 
 ## 5. กำหนด Branding
 
 เราสามารถกำหนดข้อมูลที่จะแสดงขึ้นมาในขั้นตอนการ Authentication หรือส่วนการทำงานอื่นๆ ได้ เช่น ชื่อ และโลโก้ของแอพ 
 
-ดาวน์โหลดโลโก้มาลองได้เลย
+[ดาวน์โหลดโลโก้มาลองได้เลย](https://github.com/teerasej/dotnet-core-handbook/blob/master/graph-api/logo.png)
+
+<img width="1015" alt="2021-11-21_20-45-39" src="https://user-images.githubusercontent.com/85179/142765451-d75b2fe5-fe64-4b89-8e67-8d657d76db26.png">
+
 
 ## 6. ตั้งค่าส่วนของ Authentication
 
@@ -46,3 +62,5 @@
 
 1. เช่นตอนแรกเราจะมี Mobile and Desktop เป็น Platform เริ่มต้น และมี Redirect URI ให้เปิดใช้งานเช่น NativeClient, Live SDK, หรือ MASL (Microsoft Authentication Library)
 2. ส่วนของ Advanced Setting > Allow Public Client flow **ให้เปิดใช้งาน**
+<img width="1088" alt="2021-11-21_20-48-24" src="https://user-images.githubusercontent.com/85179/142765456-dd803f70-36b8-4f46-8f04-130ecd90aa85.png">
+
