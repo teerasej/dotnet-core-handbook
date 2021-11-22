@@ -3,3 +3,4 @@
 
 1. [สร้างโปรเจค .NET console และติดตั้ง package ที่จำเป็น](init-project.md)
 2. [สร้าง secret store และกำหนด Application ID ลง Secret File](init-secret-and-save-appid.md)
+3. [สร้างส่วนรับคำสั่งจาก console](implement-input.md)

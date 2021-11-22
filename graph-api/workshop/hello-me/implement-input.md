@@ -17,15 +17,15 @@ while (choice != 0)
         choice = int.Parse(Console.ReadLine());
     }
     catch (System.FormatException)
-    {
-        // Set to invalid value
+    { 
+        // ถ้าค
         choice = -1;
     }
 
     switch (choice)
     {
         case 0:
-            // Exit the program
+            // ถ้าพิมพ์ 0 คือจบการทำงาน
             Console.WriteLine("Goodbye...");
             break;
         case 1:
