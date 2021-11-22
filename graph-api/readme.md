@@ -17,12 +17,12 @@
 ## Workshop
 
 - [Hello, Me!](workshop/hello-me/readme.md)
-- [Accessing Email]
-- [Working with OneDrive]
-- [Managing Calendar]
-- [Hosting Team]
+- [Accessing Email](workshop/email/readme.md)
+- [Working with OneDrive](workshop/onedrive/readme.md)
+- [Managing Calendar](workshop/calendar/readme.md)
+- [Hosting Team](workshop/team/readme.md)
 
-## ⚠️ Predecated Content ⚠️
+## ⚠️ Advanced Content ⚠️
 
 ### Authentication ผ่าน API แบบทั่วไป (Web Application)
 
