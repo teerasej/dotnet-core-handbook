@@ -83,10 +83,50 @@ while (choice != 0)
 }
 ```
 
+## 4. ลองของ
+
+ในเมื่อการเรียกใช้ `tokenCredential.GetTokenAsync(context)` โดยตรง ทำให้เกิดกระบวนการ authentication 
+
+- ถ้าเรามีการเรียกซ้ำครั้งที่สองระหว่างใช้งานแอพ จะเกิดอะไรขึ้น? 
+
+```cs
+GraphHelper.Initialize(appId, scopes, (code, cancellation) =>
+{
+    Console.WriteLine(code.Message);
+    return Task.FromResult(0);
+});
+
+var accessToken = GraphHelper.GetAccessTokenAsync(scopes).Result;
+Console.WriteLine("Signed In...");
+// แสดง access token หลังจากการร้องขอครั้งแรก ตอนเริ่มการทำงาน
+Console.WriteLine($"Access token: {accessToken}\n");
+
+
+while (choice != 0)
+{
+    //...
+
+    switch (choice)
+    {
+        case 0:
+            // Exit the program
+            Console.WriteLine("Goodbye...");
+            break;
+        case 1:
+            // ไหนลองขอ token อีกทีสิ ได้ token ตัวเดิมไหม ต้อง sign in ใหม่อีกครั้งไหม?
+            accessToken = GraphHelper.GetAccessTokenAsync(scopes).Result;
+            Console.WriteLine($"Access token: {accessToken}\n");
+            break;
+        default:
+            Console.WriteLine("Invalid choice! Please try again.");
+            break;
+    }
+}
+```
+
 ## ไฟล์สมบูรณ์
 
 ```cs
-// See https://aka.ms/new-console-template for more information
 using Microsoft.Extensions.Configuration;
 using simple_graph_console;
 
@@ -152,41 +192,3 @@ while (choice != 0)
 
 ```
 
-## ลองของ
-
-ในเมื่อการเรียกใช้ 
-
-```cs
-GraphHelper.Initialize(appId, scopes, (code, cancellation) =>
-{
-    Console.WriteLine(code.Message);
-    return Task.FromResult(0);
-});
-
-var accessToken = GraphHelper.GetAccessTokenAsync(scopes).Result;
-Console.WriteLine("Signed In...");
-// แสดง access token หลังจากการร้องขอครั้งแรก ตอนเริ่มการทำงาน
-Console.WriteLine($"Access token: {accessToken}\n");
-
-
-while (choice != 0)
-{
-    //...
-
-    switch (choice)
-    {
-        case 0:
-            // Exit the program
-            Console.WriteLine("Goodbye...");
-            break;
-        case 1:
-            // ไหนลองขอ token อีกทีสิ ได้ token ตัวเดิมไหม ต้อง sign in ใหม่อีกครั้งไหม?
-            accessToken = GraphHelper.GetAccessTokenAsync(scopes).Result;
-            Console.WriteLine($"Access token: {accessToken}\n");
-            break;
-        default:
-            Console.WriteLine("Invalid choice! Please try again.");
-            break;
-    }
-}
-```
