@@ -15,7 +15,7 @@ dotnet user-secrets init
 
 ```bash
 dotnet user-secrets set appId "YOUR_APP_ID_HERE"
-dotnet user-secrets set scopes "User.Read;MailboxSettings.Read;Calendars.ReadWrite"
+dotnet user-secrets set scopes "User.Read;"
 ```
 
 * เราสามารถมาแก้ไข scopes ได้ที่หลัง ผ่านการกำหนดด้วยคำสั่งเดียวกัน

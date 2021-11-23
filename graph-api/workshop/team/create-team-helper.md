@@ -1,11 +1,11 @@
 
-# สร้าง OneDrive Helper
+# สร้าง Team Helper
 
-ในที่นี้เราจะสร้าง Class ชื่อ **EmailHelper** เพื่อแยกจัดการโค้ดเฉพาะส่วนของการเข้าถึง Email นะครับ
+ในที่นี้เราจะสร้าง Class ชื่อ **TeamHelper** เพื่อแยกจัดการโค้ดเฉพาะส่วนของการเข้าถึง Team นะครับ
 
 ## 1. ทำให้ GraphHelper สามารถแชร์ client ให้ helper ตัวอื่นได้
 
-เนื่องจาก `GraphServiceClient` ของ **GraphHelper** เป็นตัวที่ใช้ติดต่อกับ Microsoft Graph API โดยตรง เราจึงจะนำมันมาใช้ใน EmailHelper ด้วย เพื่อลดความซ้ำซ้อน
+เนื่องจาก `GraphServiceClient` ของ **GraphHelper** เป็นตัวที่ใช้ติดต่อกับ Microsoft Graph API โดยตรง เราจึงจะนำมันมาใช้ใน TeamHelper ด้วย เพื่อลดความซ้ำซ้อน
 
 ดังนั้นเราจะปรับ ให้ GraphServiceClient ในไฟล์ GraphHelper.cs เป็น public เพื่อให้ง่ายต่อการฝึกทำ
 
@@ -23,9 +23,9 @@ namespace simple_graph_console
 }
 ```
 
-## 2. สร้าง OneDrive 
+## 2. สร้าง Team 
 
-สร้างไฟล์ชื่อ **OneDriveHelper.cs** และกำหนดให้พร้อมสำหรับการรับ **GraphServiceClient** มาใช้งาน
+สร้างไฟล์ชื่อ **TeamHelper.cs** และกำหนดให้พร้อมสำหรับการรับ **GraphServiceClient** มาใช้งาน
 
 ```cs
 
@@ -33,7 +33,7 @@ using Microsoft.Graph;
 
 namespace simple_graph_console
 {
-    public class OneDriveHelper
+    public class TeamHelper
     {
         private static GraphServiceClient graphClient;
 
@@ -46,7 +46,7 @@ namespace simple_graph_console
 }
 ```
 
-## 3. ส่งผ่าน ให้ OneDriveHelper
+## 3. ส่งผ่าน ให้ TeamHelper
 
 เปิดไฟล์ **Program.cs**
 
@@ -59,8 +59,8 @@ var accessToken = GraphHelper.GetAccessTokenAsync(scopes).Result;
 Console.WriteLine("Signed In...\n");
 
 
-// ส่งผ่านให้กับ OneDrive Helper ตรงนี้แล้วกัน กำลังดี 
-OneDriveHelper.Initialize(GraphHelper.graphClient);
+// ส่งผ่านให้กับ Team Helper ตรงนี้แล้วกัน กำลังดี 
+TeamHelper.Initialize(GraphHelper.graphClient);
 
 
 int choice = -1;

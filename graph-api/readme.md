@@ -19,8 +19,8 @@
 - [Hello, Me!](workshop/hello-me/readme.md)
 - [Accessing Email](workshop/email/readme.md)
 - [Working with OneDrive](workshop/onedrive/readme.md)
-- [Managing Calendar]()
-- [Hosting Team]()
+- [Hosting Team](workshop/team/readme.md)
+- [Managing Calendar](workshop/calendar/readme.md)
 
 
 ## ⚠️ Advanced Content ⚠️
