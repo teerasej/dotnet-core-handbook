@@ -13,12 +13,12 @@
 
 ## 2. การ List หรือค้นหาไฟล์
 
-1. [แสดงรายการไฟล์](request-files-list.md) 
-2. [สร้าง Directory](manage-directory.md)
+3. [แสดงรายการไฟล์](request-files-list.md) 
+4. [สร้าง Directory](manage-directory.md)
 
 ## 3. การดาวน์โหลด และอัพโหลดไฟล์
 
 [ดาวน์โหลดไฟล์ที่ใช้ในการฝึก](https://nextflowth-my.sharepoint.com/:u:/g/personal/teerasej_nextflowth_onmicrosoft_com/EQ4fDAEICytEo8yNqhyr5CQBktgtiSMBKHoU-sVbJkDWew?e=KG1v8l)
 
-3. [Download File](download-file.md)
-4. [Upload File](upload-file.md)
+5. [Download File](download-file.md)
+6. [Upload File](upload-file.md)

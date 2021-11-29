@@ -22,6 +22,9 @@
 - [Hosting Team](workshop/team/readme.md)
 - [Managing Calendar](workshop/calendar/readme.md)
 
+### Practice
+
+- [download file attachment และเอาขึ้น onedrive](workshop/attachment-to-drive.md)
 
 ## ⚠️ Advanced Content ⚠️
 
