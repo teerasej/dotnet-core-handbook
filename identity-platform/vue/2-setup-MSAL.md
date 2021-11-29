@@ -1,0 +1,177 @@
+
+# ตั้งค่า Microsoft Authication Library
+
+ในที่นี้เนื่องจากไม่มี Package สำหรับ Vue โดยตรง
+
+เราจึงใช้ lib ที่พัฒนาโดยคุณ Ben Coleman นะครับ
+
+## 1. กำหนดค่าต่างๆ พร้อมให้ใช้งาน
+
+หลังจากที่เราทำการลงทะเบียน (App Registration) แบบ SPA ใน Active Directory แล้ว เราจะเอาข้อมูลมาเตรียมใช้งานใน React 
+
+ข้อมูลสำคัญได้แก่
+
+- client Id
+- authority สามารถหาได้จากส่วน tenant ID 
+- redirectUri 
+
+```js
+// src/services/auth.js
+
+
+import * as msal from '@azure/msal-browser'
+
+// MSAL object used for signing in users with MS identity platform
+let msalApp
+
+export default {
+  
+  // ทำการกำหนด client ID และ tenant Id
+  async configure(clientId, tenantId = 'common') {
+    // Can only call configure once
+    if (msalApp) {
+      return
+    }
+
+    // เช็ค client ID
+    if (!clientId) {
+      return
+    }
+
+    const config = {
+      auth: {
+        clientId: clientId,
+        redirectUri: window.location.origin,
+        authority: 'https://login.microsoftonline.com/' + tenantId
+      },
+      cache: {
+        cacheLocation: 'localStorage'
+      }
+      // Only uncomment when you *really* need to debug what is going on in MSAL
+      /* system: {
+        logger: new msal.Logger(
+          (logLevel, msg) => { console.log(msg) },
+          {
+            level: msal.LogLevel.Verbose
+          }
+        )
+      } */
+    }
+    console.log('### Azure AD sign-in: enabled\n', config)
+
+    // สร้าง MSAL object
+    msalApp = new msal.PublicClientApplication(config)
+  },
+
+}
+
+```
+
+## 2. ทำการโหลดใส่ component 
+
+```vue
+//  src/views/Home.vue
+
+<template>
+  <ion-page>
+    <ion-header :translucent="true">
+      <ion-toolbar>
+        <ion-title>Vue Graph</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content :fullscreen="true">
+      <div id="container">
+        <div v-if="!user.name">
+          <ion-button>Sign in</ion-button>
+        </div>
+        <div v-if="user.name">
+          <p>Hello, {{ user.name }}</p>
+          <ul>
+            <li v-for="item in messages" :key="item.id">
+              {{ item.subject }}
+            </li>
+          </ul>
+          <ion-button>Sign out</ion-button>
+        </div>
+      </div>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script>
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/vue";
+import { defineComponent } from "vue";
+
+// import auth module
+import auth from '../services/auth';
+
+export default defineComponent({
+  name: "Home",
+  components: {
+    IonContent,
+    IonHeader,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+  },
+
+  data: function () {
+    return {
+      user: {},
+      messages: [
+        { subject: "Learn JavaScript" },
+        { subject: "Learn Vue.js" },
+        { subject: "Build Something Awesome" },
+      ],
+    };
+  },
+
+  // ทำการ config ตัว MSAL object ตอนโหลด component เสร็จ
+  async created() {
+    let appClientID = "18942c9f-a155-4f47-8a2e-26a9bec3a45f";
+    let tenantId = "2f85a92b-2b18-47a7-9ad3-32caebd8138a";
+    auth.configure(appClientID, tenantId);
+    // Restore any cached or saved local user
+    //this.user = auth.user();
+  },
+
+});
+</script>
+
+<style scoped>
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+</style>
+```
